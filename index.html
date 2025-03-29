@@ -151,11 +151,63 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 
-    <!-- Content Sections (Initially Hidden) -->
     <div id="agenda" class="content-section">
         <h2>Event Agenda</h2>
-        <p>Details about the agenda...</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>09:00 - 09:30 AM</td><td>Registration</td></tr>
+                    <tr><td>09:30 - 09:35 AM</td><td>Welcome Remarks</td></tr>
+                    <tr><td>09:35 - 09:40 AM</td><td>Opening Remarks</td></tr>
+                    <tr><td>09:40 - 09:55 AM</td><td>Technical Talk 1</td></tr>
+                    <tr><td>09:55 - 10:10 AM</td><td>Technical Talk 2</td></tr>
+                    <tr><td>10:10 - 11:00 AM</td><td>Hands-on Session</td></tr>
+                    <tr><td>11:00 - 11:10 AM</td><td>Breakfast</td></tr>
+                    <tr><td>11:10 - 11:30 AM</td><td>Quiz</td></tr>
+                    <tr><td>11:30 - 11:35 AM</td><td>Q&A</td></tr>
+                    <tr><td>11:45 - 11:50 AM</td><td>Closing Remarks</td></tr>
+                    <tr><td>11:50 - 12:00 Noon</td><td>Cake Cutting</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+    
+    <style>
+        .table-container {
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        @media screen and (max-width: 600px) {
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+    
     <div id="projects" class="content-section">
         <h2>Key Projects</h2>
         <p>Details about the key projects...</p>
