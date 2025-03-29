@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Day 2025 - ISBAT University</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome (for icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="images/logo.png" alt="Arduino Day Logo" width="300" class="me-2" style="border-radius: 5px;">
+            </a>
+            <button class="btn btn-light" onclick="toggleSidebar()">☰ Menu</button>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu (Hidden by Default) -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn btn btn-danger" onclick="toggleSidebar()">✖</button>
+        <!-- <h2 class="text-center text-white mt-3">Menu</h2> -->
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action" onclick="showContent('agenda')">📅 Event Agenda</li>
+            <li class="list-group-item list-group-item-action" onclick="showContent('projects')">💡 Key Projects</li>
+            <li class="list-group-item list-group-item-action" onclick="showContent('activities')">🎯 Attendee
+                Activities</li>
+            <li class="list-group-item list-group-item-action" onclick="showContent('expectations')">✅ What to Expect
+            </li>
+        </ul>
+    </div>
+
+    <!-- Image Slider -->
+    <div id="slider" class="container mt-4">
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide" style="background-image: url('images/flier1.png');"></div>
+                <div class="slide" style="background-image: url('images/flier2.png');"></div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/developer.jpg" alt="Namurinda Alex" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Namurinda Alex</h2>
+                            <p>GRC - Engineering Faculty <br> Organiser, Mc, <br> Hands on session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/developer.jpg" alt="Namurinda Alex" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Dr. Mayur Kumar Chhipa</h2>
+                            <p>Head, Faculty of Engineering <br> Opening Remarks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/will.jpg" alt="Katusiime Deborah" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Ahaisibwe William</h2>
+                            <p>DIY hands on session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/sam.jpg" alt="Musinguzi Chrispus" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Putshu Samuel</h2>
+                            <p>Speaker <br> Overview of Arduino hardware and software programming</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/sam.jpg" alt="Musinguzi Chrispus" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Zacharie Masimango</h2>
+                            <p>Speaker <br> Quiz Session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/speaker3.jpg" alt="Musinguzi Chrispus" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Musinguzi Chrispus</h2>
+                            <p>Topic: Embedded Systems with Arduino</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="images/speaker3.jpg" alt="Musinguzi Chrispus" class="speaker-img">
+                        </div>
+                        <div class="slide-text">
+                            <h2>Musinguzi Chrispus</h2>
+                            <p>Topic: Embedded Systems with Arduino</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Content Sections (Initially Hidden) -->
+    <div id="agenda" class="content-section">
+        <h2>Event Agenda</h2>
+        <p>Details about the agenda...</p>
+    </div>
+    <div id="projects" class="content-section">
+        <h2>Key Projects</h2>
+        <p>Details about the key projects...</p>
+    </div>
+    <div id="activities" class="content-section">
+        <h2>Attendee Activities</h2>
+        <p>Details about the activities...</p>
+    </div>
+    <div id="expectations" class="content-section">
+        <h2>What to Expect</h2>
+        <p>Details about what attendees can expect...</p>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2025 Arduino Day | ISBAT University | Designed with ❤️
+    </footer> -->
+
+    <!-- Bootstrap JS & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sidebar Toggle
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Show the relevant content when a menu item is clicked
+        function showContent(section) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the clicked section
+            const content = document.getElementById(section);
+            content.classList.add('active');
+
+            // Clear the slider
+            document.getElementById('slider').style.display = 'none';
+        }
+
+        // Image Slider Logic
+        let slideIndex = 0;
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            slideIndex += direction;
+            if (slideIndex < 0) slideIndex = totalSlides - 1;
+            if (slideIndex >= totalSlides) slideIndex = 0;
+
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(() => moveSlide(1), 5000);
+    </script>
+
+</body>
+
+</html>

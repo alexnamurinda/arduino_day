@@ -1,0 +1,159 @@
+
+/* Sidebar style */
+ .sidebar {
+    position: fixed;
+    top: 100px;
+    border-radius: 5px;
+    right: -250px; /* Start off-screen */
+    width: 250px;
+    height: fit-content;
+    background-color: rgb(50, 142, 229);
+    color: white;
+    transition: right 0.3s ease;
+    padding-top: 60px;
+    z-index: 9999;
+}
+
+
+/* Speaker Image Style */
+.speaker-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid #fff; /* Optional: adds a border around the image */
+    margin-bottom: 20px;
+}
+
+/* Slide Content */
+.slide-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(198, 193, 193, 0.5); /* Optional: adds a transparent background */
+    border-radius: 10px;
+}
+
+/* Text below image */
+.slide-text h2 {
+    color: #dc890d;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.slide-text p {
+    color: black;
+    font-size: 1.5rem;
+
+}
+
+/* Circle image for speakers */
+.speaker-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Slider styles */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 430px;
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.sidebar .list-group-item {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    justify-content: center;
+}
+
+.sidebar .list-group-item:hover {
+    background-color: #25bbdd;
+}
+
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Content section visibility */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
