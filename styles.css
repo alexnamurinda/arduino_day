@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
 
 body {
@@ -19,7 +18,7 @@ header {
     background: #1f5282;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 header h1 {
@@ -35,12 +34,12 @@ header p {
 
 /* Main Content */
 main {
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
     background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
@@ -49,53 +48,66 @@ main {
     text-align: center;
 }
 
-.video-container h2 {
-    color: #1a237e;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 /* Description Section */
 .description {
-    margin-top: 20px;
+    margin-top: 40px;
 }
-
-.description h2 {
-    color: #1a237e;
+.lead{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 .description ul {
     list-style-type: none;
-    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.video-container h2,
+.description h2, .row h2 {
+    color: #1a237e;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .description ul li {
-    background: #f9f9f9;
+    background: #f2f1f1;
     padding: 10px;
     margin: 5px 0;
-    border-left: 5px solid #1a237e;
+    border-left: 10px solid #1a237e;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Footer */
+.description ul li:hover {
+    transform: scale(1.04);
+}
+
+/* Card Styling */
+.card {
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    max-width: auto;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 footer {
-    text-align: center;
-    padding: 10px;
     background: #1a237e;
     color: white;
-    margin-top: 20px;
+    padding: 10px;
 }
+
