@@ -1,0 +1,95 @@
+/* General Reset */
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #276ca4;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(16, 16, 16, 0.1);
+    border-radius: 8px;
+}
+
+/* Video Section */
+.video-container {
+    text-align: center;
+}
+
+.video-container h2 {
+    color: #1a237e;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Description Section */
+.description {
+    margin-top: 20px;
+}
+
+.description h2 {
+    color: #1a237e;
+}
+
+.description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.description ul li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 5px solid #1a237e;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1a237e;
+    color: white;
+    margin-top: 20px;
+}
